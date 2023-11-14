@@ -56,6 +56,7 @@ module "eks" {
 
   cluster_name    = local.cluster_name
   cluster_version = "1.27"
+  create_cloudwatch_log_group = false
 
   vpc_id                         = var.vpc_id
   subnet_ids                     = var.private_subnets
